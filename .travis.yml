@@ -2,16 +2,16 @@ language: java
 jdk: oraclejdk8
 
 cache:
-        directories:
-        - "$HOME/.m2/repository"
+  directories:
+  - "$HOME/.m2/repository"
 
 services:
-        - docker
+  - docker
 
 before_install:
-        - sudo service mysql stop
-        - docker pull takimatraining/devops-training-db
-        - docker run -d -p 127.0.0.01:3306:3306 takimatraining/devops-training-db
+  - sudo service mysql stop
+  - docker pull takimatraining/devops-training-db
+  - docker run -d -p 127.0.0.01:3306:3306 takimatraining/devops-training-db
 
 script:
-        - mvn verify
+  - mvn verify
