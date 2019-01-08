@@ -19,9 +19,8 @@ before_install:
 
 script:
   - |
-     mvn sonar:sonar \
+     mvn clean install sonar:sonar \
     -Dsonar.projectKey=temion_sample-application-students \
     -Dsonar.organization=temion-github \
     -Dsonar.host.url=https://sonarcloud.io \
     -Dsonar.login=985a43043526ccb244bf56b2121944a41cac1545
-  - mvn clean verify
