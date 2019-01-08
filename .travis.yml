@@ -18,7 +18,8 @@ before_install:
   - docker run -d -p 127.0.0.01:3306:3306 takimatraining/devops-training-db
 
 script:
-  - mvn sonar:sonar \
+  - |
+     mvn sonar:sonar \
     -Dsonar.projectKey=temion_sample-application-students \
     -Dsonar.organization=temion-github \
     -Dsonar.host.url=https://sonarcloud.io \
